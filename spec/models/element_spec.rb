@@ -9,16 +9,3 @@ describe 'An element' do
     expect(element.atomic_weight).to eq(BigDecimal('1.008'))
   end
 end
-
-describe 'The Element class' do
-  context 'can calculate the weight of a compound' do
-    it 'first step, seperate integers from strings' do
-      compound = 'NH2CONH2'
-      expected = ['NH', '2', 'CONH', '2']
-
-      result = Chemist.new(compound).seperate_integers_from_letters
-
-      expect(result).to eq(expected)
-    end
-  end
-end
