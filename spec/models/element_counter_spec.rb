@@ -52,5 +52,11 @@ describe 'The ElementCounter' do
 
       expect(result).to eq(expected)
     end
+    it 'compile above helper methods into one element_counter method' do
+      actual = @count_elements.element_counter
+      expected = ['Li', 1, 'Fe', 1, 'C', 1, 'O', 4, 'C', 1, 'O', 1, 'C', 1, 'H', 3]
+
+      expect(actual).to eq(expected)
+    end
   end
 end

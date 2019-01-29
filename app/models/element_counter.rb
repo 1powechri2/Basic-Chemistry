@@ -48,4 +48,12 @@ class ElementCounter
     end
     arr
   end
+
+  def element_counter
+    a = split_on_every_character
+    b = convert_integer_strings_to_integers(a)
+    c = group_two_letter_elements(b)
+    d = place_one_after_all_elements_without_an_integer_after_them(c)
+    e = rotate_if_beginning_with_one(d)
+  end
 end
