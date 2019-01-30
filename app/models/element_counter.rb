@@ -4,7 +4,7 @@ class ElementCounter
   end
 
   def split_on_every_character
-    split = @compound.split(/(.)/)
+    split = @compound.split(/([A-Za-z])/)
     split.delete('')
     split
   end
