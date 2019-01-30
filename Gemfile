@@ -34,6 +34,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'pry'
   gem 'capybara', '~> 2.7', '>= 2.7.1'
+  gem 'simplecov', '~> 0.8.2'
+  gem 'simplecov-shield', '~> 0.0.3'
 end
 
 group :development do
