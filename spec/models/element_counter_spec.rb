@@ -1,13 +1,13 @@
 describe 'The ElementCounter' do
   before(:all) do
-    compound = 'LiFeCO4COCH3'
-    @count_elements = ElementCounter.new(compound)
+    @compound = 'LiFeCO4COCH3'
+    @count_elements = ElementCounter.new
   end
 
   context 'can calculate the weight of a compound' do
     it 'first step, split on every character' do
       expected = ['L', 'i', 'F', 'e', 'C', 'O', '4', 'C', 'O', 'C', 'H', '3']
-      result = @count_elements.split_on_every_character
+      result = @count_elements.split_on_every_character(@compound)
 
       expect(result).to eq(expected)
     end
@@ -52,8 +52,8 @@ describe 'The ElementCounter' do
 
       expect(result).to eq(expected)
     end
-    it 'compile above helper methods into one element_counter method' do
-      actual = @count_elements.element_counter
+    it 'compiles above helper methods into one element_counter method' do
+      actual = @count_elements.element_counter(@compound)
       expected = ['Li', 1, 'Fe', 1, 'C', 1, 'O', 4, 'C', 1, 'O', 1, 'C', 1, 'H', 3]
 
       expect(actual).to eq(expected)

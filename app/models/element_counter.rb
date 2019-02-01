@@ -1,10 +1,6 @@
 class ElementCounter
-  def initialize(compound)
-    @compound = compound
-  end
-
-  def split_on_every_character
-    split = @compound.split(/([A-Za-z])/)
+  def split_on_every_character(compound)
+    split = compound.split(/([A-Za-z])/)
     split.delete('')
     split
   end
@@ -49,8 +45,8 @@ class ElementCounter
     arr
   end
 
-  def element_counter
-    a = split_on_every_character
+  def element_counter(compound)
+    a = split_on_every_character(compound)
     b = convert_integer_strings_to_integers(a)
     c = group_two_letter_elements(b)
     d = place_one_after_all_elements_without_an_integer_after_them(c)

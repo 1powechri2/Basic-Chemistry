@@ -12,4 +12,9 @@ class MolecularMassCalculator
     end
     counter
   end
+
+  def molecular_mass(molecule)
+    a = seperate_elements_from_count(molecule)
+    calculate_molecular_mass(a)
+  end
 end
