@@ -33,6 +33,6 @@ given_weight: "7.5 grams",
 number_of_moles: "0.04"
 }
 
-* Since the molar mass is always calculated in grams the known weight of your compound should also
+* Since the molecular mass is always calculated in grams the known weight of your compound should also
 be in grams
 ```
