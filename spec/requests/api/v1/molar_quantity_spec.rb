@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'a user requests a molar quantity based on specific given weight of a compound' do
   context '/api/v1/molecular_mass?molecule=C6H12O6&grams=7.5' do
     it 'returns the the molar quantity' do
-      get '/api/v1/molecular_quantity?molecule=C6H12O6&grams=7.5'
+      get '/api/v1/molecular_quantity?molecule=C6H12O6&weight=7.5'
 
       body = response.body
 
