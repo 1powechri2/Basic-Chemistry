@@ -3,7 +3,7 @@
 Basic Chemistry is an api that calculates stoichiometric data. It was fun
 to make and even more fun to use.
 
-url: https://chemistry-is-awesome.herokuapp.com/
+url: https://chemistry-is-awesome.herokuapp.com
 
 ## Molecular Mass Endpoint
 ```
