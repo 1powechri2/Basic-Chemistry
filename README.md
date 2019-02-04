@@ -5,7 +5,7 @@ to make and even more fun to use.
 
 url: https://chemistry-is-awesome.herokuapp.com/
 
-##Molecular Mass Endpoint
+## Molecular Mass Endpoint
 ```
 /api/v1/molecular_mass?molecule=C20H25N3O
 
@@ -20,7 +20,7 @@ molecular_mass: "323.44"
 Carbon is C not c, Silicon is Si not si or sI. This endpoint also doesn't calculate formulas that contain
 parentheses so Al2(SO4)3 would have to be written Al2S3O12 (I am working on fixing this!).
 
-##Molar Quantity Endpoint
+## Molar Quantity Endpoint
 ```
 /api/v1/molecular_quantity?molecule=C6H12O6&weight=7.5
 
