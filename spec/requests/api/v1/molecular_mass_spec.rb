@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe 'a user requests a molecular mass' do
   context '/api/v1/molecular_mass?molecule=C6H12O6' do

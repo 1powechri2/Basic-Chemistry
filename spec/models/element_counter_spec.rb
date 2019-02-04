@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe 'The ElementCounter' do
   before(:all) do
     @compound = 'LiFeCO4COCH3'
