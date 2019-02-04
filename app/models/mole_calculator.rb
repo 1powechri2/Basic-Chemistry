@@ -1,26 +1,26 @@
 class MoleCalculator
-  def molar_mass_deci_places(molar_mass)
-    determine_decimal_places(molar_mass)
+  def molar_mass_sig_figs(molar_mass)
+    determine_sig_figs(molar_mass)
   end
 
-  def gram_weight_deci_places(gram_weight)
-    determine_decimal_places(gram_weight)
+  def gram_weight_sig_figs(gram_weight)
+    determine_sig_figs(gram_weight)
   end
 
-  def determine_decimal_places(decimal_number)
-    count = 0
-    while(decimal_number != decimal_number.to_i)
-      count += 1
-      decimal_number *= 10
-    end
-    count
+  def determine_sig_figs(number)
+    number.split[1].length
   end
 
-  def determine_sig_figs(molar_mass, gram_weight)
-    if molar_mass_deci_places(molar_mass) < gram_weight_deci_places(gram_weight)
-      return  molar_mass_deci_places(molar_mass)
+  def determine_round_to_sig_figs(molar_mass, gram_weight)
+    if molar_mass_sig_figs(molar_mass) < gram_weight_sig_figs(gram_weight)
+      return  molar_mass_sig_figs(molar_mass)
     else
-      return  gram_weight_deci_places(gram_weight)
+      return  gram_weight_sig_figs(gram_weight)
     end
+  end
+
+  def calculate_moles(molar_mass, gram_weight)
+    sig_figs = determine_round_to_sig_figs(molar_mass, gram_weight)
+    (gram_weight / molar_mass).round(sig_figs)
   end
 end
