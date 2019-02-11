@@ -1,3 +1,3 @@
 class Element < ApplicationRecord
-
+  
 end
