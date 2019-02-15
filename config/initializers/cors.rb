@@ -7,7 +7,8 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'awesome-periodic-table.firebaseapp.com'
+    # origins 'awesome-periodic-table.firebaseapp.com'
+    origins 'http://localhost:4200/'
 
     resource '*',
       headers: :any,
