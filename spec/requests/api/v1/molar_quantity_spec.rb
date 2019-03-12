@@ -12,7 +12,7 @@ describe 'a user requests a molar quantity based on specific given weight of a c
       expect(json[:molecule]).to eq('C6H12O6')
       expect(json[:molecular_mass]).to eq('180.156 grams')
       expect(json[:given_weight]).to eq('7.5 grams')
-      expect(json[:number_of_moles]).to eq('0.04')
+      expect(json[:number_of_moles]).to eq('0.042')
     end
   end
 end

@@ -21,6 +21,8 @@ class MoleCalculator
 
   def calculate_moles(molar_mass, gram_weight)
     sig_figs = determine_round_to_sig_figs(molar_mass, gram_weight)
-    (gram_weight / molar_mass).round(sig_figs)
+    calc = (gram_weight / molar_mass)
+    exp = calc.exponent.abs
+    calc.round(sig_figs + exp)
   end
 end
